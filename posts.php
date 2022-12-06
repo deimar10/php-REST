@@ -69,7 +69,7 @@ elseif ($method == 'PUT') {
     $data = file_get_contents('php://input');
 
     $jsonData = json_decode($data);
-
+    http_response_code(201);
     $title =  $jsonData->title;
     $body = $jsonData->body;
 
